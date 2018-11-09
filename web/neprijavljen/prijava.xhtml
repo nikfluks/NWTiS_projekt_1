@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <body>
+        <ui:composition template="./predlozakPrijava.xhtml">
+            <ui:define name="naslov">
+                NWTiS - Prijava
+            </ui:define>
+            <ui:define name="top">
+                NWTiS - Prijava
+            </ui:define>
+            <ui:define name="content">
+                <h:form>
+                    <h:outputLabel class="sveLabeleUzInput" for="korIme" value="Korisničko ime: "></h:outputLabel>
+                    <h:inputText id="korIme" value="#{prijava.korisnickoIme}">
+                    </h:inputText>
+                    <br/>
+                    <h:outputLabel class="sveLabeleUzInput prijavaLozinka" for="lozinka" value="Lozinka: "></h:outputLabel>
+                    <h:inputSecret id="lozinka" value="#{prijava.lozinka}"></h:inputSecret>
+                    <br/>
+                    <h:commandButton class="prijavaGumb" value="Prijavi se" action="#{prijava.prijava()}"></h:commandButton>
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

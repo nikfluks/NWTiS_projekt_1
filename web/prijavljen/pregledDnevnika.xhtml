@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+    <body>
+        <ui:composition template="./predlozak.xhtml">
+            <ui:define name="naslov">
+                NWTiS - Pregled dnevnika
+            </ui:define>
+            <ui:define name="top">
+                NWTiS - Pregled dnevnika
+            </ui:define>
+            <ui:define name="content">
+                <h:form>
+                    <h:panelGrid columns="3">
+                        <h:outputLabel class="sveLabeleUzInput" for="vrstaZapisa" value="Vrsta zapisa"/>
+                        <h:inputText id="vrstaZapisa" value="#{pregledDnevnika.vrstaZapisa}" a:placeholder="SOCKET|REST|SOAP"/>
+                        <h:outputText value="" rendered="true"/>
+
+                        <h:outputLabel class="sveLabeleUzInput" for="odDatum" value="Od"/>
+                        <h:inputText id="odDatum" value="#{pregledDnevnika.odDatum}" a:placeholder="dd.MM.yyyy {HH:mm}"/>
+                        <h:outputText value="" rendered="true"/>
+
+                        <h:outputLabel class="sveLabeleUzInput" for="doDatum" value="Do"/>
+                        <h:inputText id="doDatum" value="#{pregledDnevnika.doDatum}" a:placeholder="dd.MM.yyyy {HH:mm}"/>
+                        <h:commandButton class="sveGumbovi" value="Filtriraj" action="#{pregledDnevnika.filtrirajPodatke()}">
+                            <f:ajax execute="vrstaZapisa odDatum doDatum" render="dnevnikPodaci prehodna sljedeca" />
+                        </h:commandButton>
+                    </h:panelGrid>
+                    <h:panelGroup id="dnevnikPodaci" layout="block">
+                        <h:dataTable value="#{pregledDnevnika.listaZapisaIzDnevnika}"
+                                     var="d"
+                                     styleClass="sveTablice"
+                                     headerClass="sveTabliceZaglavlje"
+                                     rowClasses="sveTabliceNeparni,sveTabliceParni"
+                                     cellpadding="5px">
+                            <h:column>
+                                <f:facet name="header">Id</f:facet>
+                                    #{d.id}
+                            </h:column>                            
+                            <h:column>
+                                <f:facet name="header">Korisničko ime</f:facet>
+                                    #{d.korisnickoIme}
+                            </h:column>                            
+                            <h:column>
+                                <f:facet name="header">Sadržaj</f:facet>
+                                    #{d.sadrzaj}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Vrsta</f:facet>
+                                    #{d.vrsta}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Vrijeme prijema</f:facet>
+                                <h:outputText value="#{d.vrijemePrijema}">
+                                    <f:convertDateTime pattern="dd.MM.yyyy HH:mm:ss" timeZone="Europe/Zagreb"/>
+                                </h:outputText>
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">URL adresa</f:facet>
+                                    #{d.url}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">IP adresa</f:facet>
+                                    #{d.ipAdresa}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">Trajanje zahtjeva</f:facet>
+                                    #{d.trajanjeZahtjeva}
+                            </h:column>
+                        </h:dataTable>
+                    </h:panelGroup>
+                    <h:commandButton id="prethodna"
+                                     value="Prehodna"
+                                     action="#{pregledDnevnika.prethodna()}"
+                                     style="visibility:#{(pregledDnevnika.prikaziPrethodnu)?'visible':'hidden'}"
+                                     class="sveGumbPrethodnaStranica">
+                    </h:commandButton>
+                    <h:commandButton id="sljedeca" 
+                                     value="Sljedeća" 
+                                     action="#{pregledDnevnika.sljedeca()}"
+                                     style="visibility:#{(pregledDnevnika.prikaziSljedecu)?'visible':'hidden'}">
+                    </h:commandButton>
+                </h:form>
+            </ui:define>
+        </ui:composition>
+
+    </body>
+</html>

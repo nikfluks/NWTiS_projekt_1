@@ -1,0 +1,44 @@
+.sveGumbPrethodnaStranica{
+    margin-left: 120px;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.sveTablice{  
+    margin-top: 10px;
+    border-collapse: inherit;
+    border-style: solid;
+}
+.sveTabliceZaglavlje{
+    text-align:center;
+    background:none repeat scroll 0 0 lightgray;
+    border-bottom:1px solid #BBBBBB;
+    padding:16px;
+}
+.sveTabliceNeparni{
+    text-align:center;
+    background:none repeat scroll 0 0 #FFFFFF;
+    border-top:1px solid #BBBBBB;
+}
+.sveTabliceParni{
+    text-align:center;
+    background:none repeat scroll 0 0 #F9F9F9;
+    border-top:1px solid #BBBBBB;
+}
+.sveLabeleUzInput{
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    margin-right: 2px;
+}
+.prijavaGumb{
+    font-size: 15px;
+    margin-left: 103px;
+    margin-top: 5px;
+}
+.prijavaLozinka{
+    margin-top: 10px;
+}
+.prijavaGumb:hover{
+    text-decoration: underline;
+}

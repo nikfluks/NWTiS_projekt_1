@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>NWTIS konfiguracija</comment>
+<entry key="intervalDretveMeteo">3600</entry>
+<entry key="intervalDretveEmail">30</entry>
+<entry key="portServera">15323</entry>
+<entry key="stranicenjeKorisnika">4</entry>
+<entry key="stranicenjeDnevnika">15</entry>
+<entry key="emailPrimatelj">servis@nwtis.nastava.foi.hr</entry>
+<entry key="emailPrimateljLozinka">123456</entry>
+<entry key="emailPosiljatelj">admin@nwtis.nastava.foi.hr</entry>
+<entry key="emailPredmet">Informacije o zahtjevu</entry>
+<entry key="emailServer">127.0.0.1</entry>
+<entry key="mail.imap.port">143</entry>
+<entry key="mail.numMessagesToRead">10</entry>
+<entry key="mail.folderNWTiS">NWTiS nikfluks projekt</entry>
+<entry key="korisnickoImeParkiranje">nikfluks</entry>
+<entry key="lozinkaParkiranje">6jebuEfN</entry>
+<entry key="server.database">jdbc:mysql://localhost/</entry>
+<entry key="admin.username">nwtis_admin</entry>
+<entry key="admin.password">nwtis_foi</entry>
+<entry key="admin.database">mysql</entry>
+<entry key="user.username">nwtis_nikfluks</entry>
+<entry key="user.password">nwtis_nikfluks</entry>
+<entry key="user.databaseMySQL">nwtis_nikfluks_bp_1</entry>
+<entry key="user.databaseJavaDB">nwtis_nikfluks_bp_2</entry>
+<entry key="driver.database.odbc">sun.jdbc.odbc.JdbcOdbcDriver</entry>
+<entry key="driver.database.mysql">com.mysql.jdbc.Driver</entry>
+<entry key="driver.database.derby">org.apache.derby.jdbc.ClientDriver</entry>
+<entry key="driver.database.postgresql">org.postgresql.Driver</entry>
+<entry key="apikey">105a5d6f11add67e1dff15b72046920f</entry>
+<entry key="gmapikey">AIzaSyAyeUMTXoNPgsu4VBTkh-RtLjkpCfRKHOI</entry>
+</properties>

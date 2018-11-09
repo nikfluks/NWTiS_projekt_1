@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <body>
+        <ui:composition template="./predlozak.xhtml">
+            <ui:define name="naslov">
+                NWTiS - Pregled korisnika
+            </ui:define>
+            <ui:define name="top">
+                NWTiS - Pregled korisnika
+            </ui:define>
+            <ui:define name="content">
+                <h:form>
+                    <h:outputLabel value="Ispis svih korisnika iz baze:"/>
+                    <h:dataTable value="#{pregledKorisnika.listaSvihKorisnika}"
+                                 var="k"
+                                 styleClass="sveTablice"
+                                 headerClass="sveTabliceZaglavlje"
+                                 rowClasses="sveTabliceNeparni,sveTabliceParni"
+                                 cellpadding="5px">
+                        <h:column>
+                            <f:facet name="header">Id</f:facet>
+                                #{k.id}
+                        </h:column>                            
+                        <h:column>
+                            <f:facet name="header">Korisničko ime</f:facet>
+                                #{k.korisnickoIme}
+                        </h:column>                            
+                        <h:column>
+                            <f:facet name="header">Lozinka</f:facet>
+                                #{k.lozinka}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Ime</f:facet>
+                                #{k.ime}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Prezime</f:facet>
+                                #{k.prezime}
+                        </h:column>
+                    </h:dataTable>
+                    <h:commandButton value="Prehodna"
+                                     action="#{pregledKorisnika.prethodna()}"
+                                     style="visibility:#{(pregledKorisnika.prikaziPrethodnu)?'visible':'hidden'}"
+                                     class="sveGumbPrethodnaStranica">
+                    </h:commandButton>
+                    <h:commandButton value="Sljedeća" 
+                                     action="#{pregledKorisnika.sljedeca()}"
+                                     style="visibility:#{(pregledKorisnika.prikaziSljedecu)?'visible':'hidden'}">
+                    </h:commandButton>
+                </h:form>
+            </ui:define>
+        </ui:composition>
+    </body>
+</html>

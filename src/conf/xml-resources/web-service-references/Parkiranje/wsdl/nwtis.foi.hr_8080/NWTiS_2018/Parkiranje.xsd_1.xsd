@@ -1,0 +1,458 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://serveri.ws.dkermek.nwtis.foi.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://serveri.ws.dkermek.nwtis.foi.org/">
+
+<xs:element name="aktivirajGrupu" type="tns:aktivirajGrupu" />
+
+<xs:element name="aktivirajGrupuResponse" type="tns:aktivirajGrupuResponse" />
+
+<xs:element name="aktivirajOdabranaParkiralistaGrupe" type="tns:aktivirajOdabranaParkiralistaGrupe" />
+
+<xs:element name="aktivirajOdabranaParkiralistaGrupeResponse" type="tns:aktivirajOdabranaParkiralistaGrupeResponse" />
+
+<xs:element name="aktivirajParkiralisteGrupe" type="tns:aktivirajParkiralisteGrupe" />
+
+<xs:element name="aktivirajParkiralisteGrupeResponse" type="tns:aktivirajParkiralisteGrupeResponse" />
+
+<xs:element name="autenticirajGrupu" type="tns:autenticirajGrupu" />
+
+<xs:element name="autenticirajGrupuResponse" type="tns:autenticirajGrupuResponse" />
+
+<xs:element name="blokirajGrupu" type="tns:blokirajGrupu" />
+
+<xs:element name="blokirajGrupuResponse" type="tns:blokirajGrupuResponse" />
+
+<xs:element name="blokirajOdabranaParkiralistaGrupe" type="tns:blokirajOdabranaParkiralistaGrupe" />
+
+<xs:element name="blokirajOdabranaParkiralistaGrupeResponse" type="tns:blokirajOdabranaParkiralistaGrupeResponse" />
+
+<xs:element name="blokirajParkiralisteGrupe" type="tns:blokirajParkiralisteGrupe" />
+
+<xs:element name="blokirajParkiralisteGrupeResponse" type="tns:blokirajParkiralisteGrupeResponse" />
+
+<xs:element name="dajBrojPoruka" type="tns:dajBrojPoruka" />
+
+<xs:element name="dajBrojPorukaResponse" type="tns:dajBrojPorukaResponse" />
+
+<xs:element name="dajStatusGrupe" type="tns:dajStatusGrupe" />
+
+<xs:element name="dajStatusGrupeResponse" type="tns:dajStatusGrupeResponse" />
+
+<xs:element name="dajStatusParkiralistaGrupe" type="tns:dajStatusParkiralistaGrupe" />
+
+<xs:element name="dajStatusParkiralistaGrupeResponse" type="tns:dajStatusParkiralistaGrupeResponse" />
+
+<xs:element name="dajSvaParkiralistaGrupe" type="tns:dajSvaParkiralistaGrupe" />
+
+<xs:element name="dajSvaParkiralistaGrupeResponse" type="tns:dajSvaParkiralistaGrupeResponse" />
+
+<xs:element name="dajSvaVozilaParkiralistaGrupe" type="tns:dajSvaVozilaParkiralistaGrupe" />
+
+<xs:element name="dajSvaVozilaParkiralistaGrupeResponse" type="tns:dajSvaVozilaParkiralistaGrupeResponse" />
+
+<xs:element name="dajTrajanjeCiklusa" type="tns:dajTrajanjeCiklusa" />
+
+<xs:element name="dajTrajanjeCiklusaResponse" type="tns:dajTrajanjeCiklusaResponse" />
+
+<xs:element name="deregistrirajGrupu" type="tns:deregistrirajGrupu" />
+
+<xs:element name="deregistrirajGrupuResponse" type="tns:deregistrirajGrupuResponse" />
+
+<xs:element name="dodajNovoParkiralisteGrupi" type="tns:dodajNovoParkiralisteGrupi" />
+
+<xs:element name="dodajNovoParkiralisteGrupiResponse" type="tns:dodajNovoParkiralisteGrupiResponse" />
+
+<xs:element name="dodajParkiralisteGrupi" type="tns:dodajParkiralisteGrupi" />
+
+<xs:element name="dodajParkiralisteGrupiResponse" type="tns:dodajParkiralisteGrupiResponse" />
+
+<xs:element name="obrisiOdabranaParkiralistaGrupe" type="tns:obrisiOdabranaParkiralistaGrupe" />
+
+<xs:element name="obrisiOdabranaParkiralistaGrupeResponse" type="tns:obrisiOdabranaParkiralistaGrupeResponse" />
+
+<xs:element name="obrisiParkiralisteGrupe" type="tns:obrisiParkiralisteGrupe" />
+
+<xs:element name="obrisiParkiralisteGrupeResponse" type="tns:obrisiParkiralisteGrupeResponse" />
+
+<xs:element name="obrisiSvaParkiralistaGrupe" type="tns:obrisiSvaParkiralistaGrupe" />
+
+<xs:element name="obrisiSvaParkiralistaGrupeResponse" type="tns:obrisiSvaParkiralistaGrupeResponse" />
+
+<xs:element name="promjeniBrojPoruka" type="tns:promjeniBrojPoruka" />
+
+<xs:element name="promjeniBrojPorukaResponse" type="tns:promjeniBrojPorukaResponse" />
+
+<xs:element name="promjeniTrajanjeCiklusa" type="tns:promjeniTrajanjeCiklusa" />
+
+<xs:element name="promjeniTrajanjeCiklusaResponse" type="tns:promjeniTrajanjeCiklusaResponse" />
+
+<xs:element name="registrirajGrupu" type="tns:registrirajGrupu" />
+
+<xs:element name="registrirajGrupuResponse" type="tns:registrirajGrupuResponse" />
+
+<xs:element name="ucitajSvaParkiralistaGrupe" type="tns:ucitajSvaParkiralistaGrupe" />
+
+<xs:element name="ucitajSvaParkiralistaGrupeResponse" type="tns:ucitajSvaParkiralistaGrupeResponse" />
+
+<xs:complexType name="dodajParkiralisteGrupi">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+<xs:element name="idParkiraliste" type="tns:parkiraliste" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="parkiraliste">
+<xs:sequence>
+<xs:element name="adresa" type="xs:string" minOccurs="0" />
+<xs:element name="geoloc" type="tns:lokacija" minOccurs="0" />
+<xs:element name="id" type="xs:int" />
+<xs:element name="kapacitet" type="xs:int" />
+<xs:element name="naziv" type="xs:string" minOccurs="0" />
+<xs:element name="status" type="tns:statusParkiralista" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="lokacija">
+<xs:sequence>
+<xs:element name="latitude" type="xs:string" minOccurs="0" />
+<xs:element name="longitude" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dodajParkiralisteGrupiResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="blokirajOdabranaParkiralistaGrupe">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+<xs:element name="odabranaParkiralista" type="xs:int" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="blokirajOdabranaParkiralistaGrupeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dajStatusParkiralistaGrupe">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+<xs:element name="idParkiraliste" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dajStatusParkiralistaGrupeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:statusParkiralista" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dajStatusGrupe">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dajStatusGrupeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:statusKorisnika" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aktivirajGrupu">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aktivirajGrupuResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obrisiSvaParkiralistaGrupe">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obrisiSvaParkiralistaGrupeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aktivirajOdabranaParkiralistaGrupe">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+<xs:element name="odabranaParkiralista" type="xs:int" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aktivirajOdabranaParkiralistaGrupeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obrisiOdabranaParkiralistaGrupe">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+<xs:element name="odabranaParkiralista" type="xs:int" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obrisiOdabranaParkiralistaGrupeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dajSvaParkiralistaGrupe">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dajSvaParkiralistaGrupeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:parkiraliste" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="promjeniBrojPoruka">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+<xs:element name="brojPoruka" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="promjeniBrojPorukaResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="ucitajSvaParkiralistaGrupe">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ucitajSvaParkiralistaGrupeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dajSvaVozilaParkiralistaGrupe">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+<xs:element name="idParkiraliste" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dajSvaVozilaParkiralistaGrupeResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:vozilo" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="vozilo">
+<xs:sequence>
+<xs:element name="akcija" type="tns:statusVozila" minOccurs="0" />
+<xs:element name="parkiraliste" type="xs:int" />
+<xs:element name="registracija" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dajTrajanjeCiklusa">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dajTrajanjeCiklusaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="blokirajParkiralisteGrupe">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+<xs:element name="idParkiraliste" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="blokirajParkiralisteGrupeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aktivirajParkiralisteGrupe">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+<xs:element name="idParkiraliste" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="aktivirajParkiralisteGrupeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="autenticirajGrupu">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="autenticirajGrupuResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="blokirajGrupu">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="blokirajGrupuResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dodajNovoParkiralisteGrupi">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+<xs:element name="idParkiraliste" type="xs:int" />
+<xs:element name="nazivParkiraliste" type="xs:string" minOccurs="0" />
+<xs:element name="adresaParkiraliste" type="xs:string" minOccurs="0" />
+<xs:element name="kapacitetParkiraliste" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dodajNovoParkiralisteGrupiResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="promjeniTrajanjeCiklusa">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+<xs:element name="trajanjeCiklusa" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="promjeniTrajanjeCiklusaResponse">
+<xs:sequence />
+</xs:complexType>
+
+<xs:complexType name="dajBrojPoruka">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="dajBrojPorukaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obrisiParkiralisteGrupe">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+<xs:element name="idParkiraliste" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="obrisiParkiralisteGrupeResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deregistrirajGrupu">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deregistrirajGrupuResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrirajGrupu">
+<xs:sequence>
+<xs:element name="korisnickoIme" type="xs:string" minOccurs="0" />
+<xs:element name="korisnickaLozinka" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registrirajGrupuResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="statusParkiralista">
+<xs:restriction base="xs:string">
+<xs:enumeration value="PASIVAN" />
+<xs:enumeration value="AKTIVAN" />
+<xs:enumeration value="BLOKIRAN" />
+<xs:enumeration value="NEPOSTOJI" />
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="statusKorisnika">
+<xs:restriction base="xs:string">
+<xs:enumeration value="PASIVAN" />
+<xs:enumeration value="AKTIVAN" />
+<xs:enumeration value="NEAKTIVAN" />
+<xs:enumeration value="REGISTRIRAN" />
+<xs:enumeration value="DEREGISTRIRAN" />
+<xs:enumeration value="BLOKIRAN" />
+<xs:enumeration value="NEPOSTOJI" />
+</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="statusVozila">
+<xs:restriction base="xs:string">
+<xs:enumeration value="ULAZ" />
+<xs:enumeration value="IZLAZ" />
+</xs:restriction>
+</xs:simpleType>
+</xs:schema>

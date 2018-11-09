@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://nwtis.foi.hr:8080/NWTiS_2018/Parkiranje?wsdl" uri="wsdl/nwtis.foi.hr_8080/NWTiS_2018/Parkiranje.wsdl"/>
+    <system systemId="http://nwtis.foi.hr:8080/NWTiS_2018/Parkiranje?xsd=1" uri="wsdl/nwtis.foi.hr_8080/NWTiS_2018/Parkiranje.xsd_1.xsd"/>
+</catalog>

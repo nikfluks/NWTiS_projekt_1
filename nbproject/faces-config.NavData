@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="prijavljen/predlozak.xhtml" x="113" y="111" zoom="true"/>
+        <Node id="prijavljen/pregledKorisnika.xhtml" x="110" y="294" zoom="true"/>
+        <Node id="neprijavljen/prijava.xhtml" x="713" y="105" zoom="true"/>
+        <Node id="prijavljen/pocetna.xhtml" x="880" y="370" zoom="true"/>
+        <Node id="test-resbeans.html" x="400" y="150" zoom="true"/>
+        <Node id="neprijavljen/pogreska.xhtml" x="535" y="372" zoom="true"/>
+        <Node id="neprijavljen/predlozakPrijava.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="prijavljen/pregledDnevnika.xhtml" x="108" y="200" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>
